@@ -1,0 +1,11 @@
+.container{
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.min.Heigth{
+  min.Heigth: 75%;
+}
