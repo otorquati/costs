@@ -1,9 +1,11 @@
-import styles from './Select.module.css'
+import React from 'react';
+
+import styles from './Select.module.css';
 
 function Select({ text, name, options, handleOnChange, value}) {
   return ( 
     <div className={styles.form_control}>
-      <label htmlFor={name}>{text}</label>
+      <label htmlFor={name}>{text}:</label>
       <select  
           name={name} 
           id={name} 
@@ -17,6 +19,6 @@ function Select({ text, name, options, handleOnChange, value}) {
         ))}
       </select>
     </div>
-  );
+  )
 }
 export default Select

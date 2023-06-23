@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {useState, useEffect} from 'react'
 // Importação dos Componentes
 import Input from '../form/Input'
@@ -23,26 +25,28 @@ function ProjectForm({ handleSubmit, btnText, projectData }){
   .catch((err) => console.log(err))
   }, [])
 
-  const submit =(e) => {
+  const submit = (e) => {
     e.preventDefault()
+    console.log(project)
     handleSubmit(project)
   }
 
   function handleChange(e) {
-    setProject({ ...project, [e.target.name]:e.target.value })
-    //console.log(project)
+    setProject({ ...project, [e.target.name]: e.target.value })
   }
+  
   function handleCategory(e) {
-    setProject({ ...project, 
+    setProject({ 
+      ...project, 
       category: {
-        id:e.target.value,
+        id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text, 
       },
       })
   }
 
   return (
-    <form onSubmit={submit} className={styles.form} action="">
+    <form onSubmit={submit} className={styles.form}>
       <Input 
           type="text"
           text="Nome do projeto"
