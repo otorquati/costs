@@ -4,7 +4,7 @@ import ProjectForm from '../project/ProjectForm';
 import styles from './NewProject.module.css';
 
 function NewProject(){
-  const history = useNavigate()
+  const Navigate = useNavigate()
   function createPost(project) {
     
     // intialize cost and services
@@ -13,14 +13,14 @@ function NewProject(){
     fetch('http://localhost:5000/projects', {
       method: 'POST',
       headers: {
-        'Content-type': 'application.json',
+        'content-type': 'application/json',
       },
       body: JSON.stringify(project),
     }).then((resp)=>resp.json())
       .then((data) => {
         // console.log(data)
         // redirect
-        history('/projects', {message: 'Projeto criado com sucesso!'})
+      Navigate('/projects', {message: 'Projeto criado com sucesso!'})
       })
       .catch(err => console.log(err))
   }
