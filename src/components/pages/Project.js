@@ -14,6 +14,7 @@ function Project() {
           'Content-Type': 'application/json'
       },
     })
+    // Transforma os dados em json
     .then((resp) => resp.json())
     .then((data) => {
         setProject(data)
