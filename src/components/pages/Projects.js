@@ -75,7 +75,7 @@ function Projects() {
         handleRemove={removeProject} />
       ))}
       {!removeLoading && <Loading />}
-      {removeLoading && projects.length ===0 && (
+      {removeLoading && projects.length === 0 && (
         <p>Não ha projetos cadastrados</p>)}
     </Container>
   </div>
