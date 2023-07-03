@@ -1,11 +1,16 @@
 import React from 'react';
+
+// Importa as Libs necessárias
 import { useParams } from 'react-router-dom';
 import {useState, useEffect} from 'react'
+
+// Importa o módulo de estilos
 import styles from './Project.module.css'
 
 
 function Project() {
   const {id} = useParams()
+  // Cria as constantes e seta seu estado 
   const [project, setProject]=useState([])
   useEffect(()=> {
     fetch(`http://localhost:5000/projects/${id}`, {
