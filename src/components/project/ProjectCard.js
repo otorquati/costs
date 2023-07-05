@@ -1,8 +1,12 @@
 import React from 'react'
+// Importa os ícones da çib de ícones
 import {BsPencil, BsFillTrashFill} from 'react-icons/bs'
 import {Link} from 'react-router-dom'
+
+// Importa o módulo de estilos do componente
 import styles from './ProjectCards.module.css'
 
+// Define as props a serem manipuladas pelo componente
 function ProjectCard({id, name, budget, category, handleRemove}){
   const remove =(e) =>{
     e.preventDefault()
@@ -18,7 +22,7 @@ function ProjectCard({id, name, budget, category, handleRemove}){
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}
       </p>
       <div className={styles.project_card_actions}>
-        <Link to="/">
+        <Link to={`/project/${id}`}>
         <BsPencil />Editar
         </Link>
         <button onClick={remove}>

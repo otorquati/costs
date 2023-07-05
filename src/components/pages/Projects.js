@@ -7,12 +7,15 @@ import Message from '../layout/Message'
 import Container from '../layout/Container'
 import Loading from '../layout/Loading'
 import LinkButton from '../layout/LinkButton'
+// Import o componente para apresentação dos cards dos projetoss
 import ProjectCard from '../project/ProjectCard'
 
 // Importa os estilos CSS
 import styles from './Projects.module.css'
 
 function Projects() {
+
+  // Cria um state para salvar os projetos
   const [projects,setProjects] = useState([])
   const [removeLoading, setRemoveLoading] =useState(false)
   const [projectMessage, setProjectMessage] = useState('')
@@ -22,7 +25,7 @@ function Projects() {
   if(location.state) {
     message = location.state.message
   }
-
+  // Faz um request para receber os dados do projeto
   useEffect(() => {
     setTimeout(() => {
   fetch('http://localhost:5000/projects', {
@@ -34,11 +37,12 @@ function Projects() {
   .then((resp) => resp.json())
   .then((data) => {
       console.log(data)
+      // Seta os projetos através da API
       setProjects(data)
       setRemoveLoading(true)
     })
     .catch((err)=> console.log(err))
-  },300)
+  },400)
 },[])
 
   function removeProject(id) {
@@ -50,7 +54,7 @@ function Projects() {
     }).then(resp=>resp.json())
     .then((data)=>{
       setProjects(projects.filter((project)=> project.id !== id))
-      // mensagem deremoção
+      // mensagem de remoção do projeto
       setProjectMessage('Projeto removido com sucesso!')
     })
     .catch(err=>console.log(err))
