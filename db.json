@@ -23,17 +23,6 @@
       "id": 7
     },
     {
-      "name": "React 3",
-      "budget": "30000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
-    },
-    {
       "name": "React 4",
       "budget": "4000",
       "category": {
