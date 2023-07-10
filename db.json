@@ -7,33 +7,8 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 920,
-      "services": [
-        {
-          "name": "Meu novo serviço",
-          "cost": "200",
-          "description": "Faça isso aqui",
-          "id": "690ea14c-53c4-4bef-8f05-2a5dbc427eca"
-        },
-        {
-          "name": "Meu novo serviço",
-          "cost": "200",
-          "description": "Faça isso aqui",
-          "id": "690ea14c-53c4-4bef-8f05-2a5dbc427eca"
-        },
-        {
-          "name": "Meu novo serviço",
-          "cost": "20",
-          "description": "Faça isso aqui",
-          "id": "ac9a724c-3c0a-4546-a593-cd470e5094c3"
-        },
-        {
-          "name": "Implementação de webpage",
-          "cost": "500",
-          "description": "desenvoler nova página de web",
-          "id": "8d183c36-8801-4203-afa1-ae8778eedf51"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 6
     },
     {
@@ -54,8 +29,27 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 4000,
+      "services": [
+        {
+          "name": "Contratar programador React",
+          "cost": "1320",
+          "description": "Página de Cartões de Natal",
+          "id": "06b591e6-0d66-4885-90dc-6eed5c6e25f6"
+        },
+        {
+          "name": "Contratar divulgador",
+          "cost": "500",
+          "description": "Promver canal em redes sociais",
+          "id": "66ec67ac-082b-430e-a21c-eae566f7c6d8"
+        },
+        {
+          "name": "Contratar designer",
+          "cost": "2180",
+          "description": "Melhorar estilo da página",
+          "id": "7904bc25-7575-4977-ba73-b6eac4090e94"
+        }
+      ],
       "id": 9
     },
     {
