@@ -7,7 +7,7 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 420,
+      "cost": 920,
       "services": [
         {
           "name": "Meu novo serviço",
@@ -26,6 +26,12 @@
           "cost": "20",
           "description": "Faça isso aqui",
           "id": "ac9a724c-3c0a-4546-a593-cd470e5094c3"
+        },
+        {
+          "name": "Implementação de webpage",
+          "cost": "500",
+          "description": "desenvoler nova página de web",
+          "id": "8d183c36-8801-4203-afa1-ae8778eedf51"
         }
       ],
       "id": 6
