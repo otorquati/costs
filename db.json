@@ -7,8 +7,27 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 420,
+      "services": [
+        {
+          "name": "Meu novo serviço",
+          "cost": "200",
+          "description": "Faça isso aqui",
+          "id": "690ea14c-53c4-4bef-8f05-2a5dbc427eca"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "200",
+          "description": "Faça isso aqui",
+          "id": "690ea14c-53c4-4bef-8f05-2a5dbc427eca"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "20",
+          "description": "Faça isso aqui",
+          "id": "ac9a724c-3c0a-4546-a593-cd470e5094c3"
+        }
+      ],
       "id": 6
     },
     {

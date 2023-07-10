@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from './Submit.module.css'
+import styles from './SubmitButton.module.css'
 
-function Submit ({text}) {
+function SubmitButton ({text}) {
   return ( 
     <div>
       <button className={styles.btn}>{text}</button>
@@ -10,4 +10,4 @@ function Submit ({text}) {
   )
 }
  
-export default Submit
+export default SubmitButton
