@@ -1,0 +1,13 @@
+.newcompany_container{
+  width: 450px;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.newcompany_container h1{
+  margin-bottom: 0.5em;
+}
+
+.newcompany_container p{
+  color: #7b7b7b;
+}

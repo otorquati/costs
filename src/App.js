@@ -3,10 +3,11 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Importação dos Componentes
 import Home from './components/pages/Home';
-import Company from './components/pages/Company';
+import Companies from './components/pages/Companies';
 import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
 import NewProject from './components/pages/NewProject';
+import NewCompany from './components/pages/NewCompany';
 import Project from './components/pages/Project';
 import Container from './components/layout/Container';
 import Navbar from './components/layout/Navbar'
@@ -19,7 +20,8 @@ function App() {
            <Container customClass="min_height">
             <Routes >
               <Route exact path="/" element={<Home/>}/>;
-              <Route path="/company" element={<Company/>}/>;
+              <Route path="/company" element={<Companies/>}/>;
+              <Route path="/newcompany" element={<NewCompany/>}/>; 
               <Route path="/projects" element={<Projects/>}/>;
               <Route path="/contact" element={<Contact/>}/>;
               <Route path="/newproject" element={<NewProject/>}/>; 

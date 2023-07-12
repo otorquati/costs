@@ -92,5 +92,58 @@
       "id": 4,
       "name": "Planejamento"
     }
+  ],
+  "companies": [
+    {
+      "0": {
+        "id": 1,
+        "name": "Micro Empreendedor"
+      },
+      "1": {
+        "id": 2,
+        "name": "Micro Empresa"
+      },
+      "2": {
+        "id": 3,
+        "name": "Pequeno"
+      },
+      "3": {
+        "id": 4,
+        "name": "Médio"
+      },
+      "4": {
+        "id": 5,
+        "name": "Grande"
+      },
+      "name": "torquality",
+      "telefone": "12988395065",
+      "porte": {
+        "id": "1",
+        "name": "Micro Empreendedor"
+      },
+      "id": 1
+    }
+  ],
+  "porte": [
+    {
+      "id": 1,
+      "name": "Micro Empreendedor"
+    },
+    {
+      "id": 2,
+      "name": "Micro Empresa"
+    },
+    {
+      "id": 3,
+      "name": "Pequeno"
+    },
+    {
+      "id": 4,
+      "name": "Médio"
+    },
+    {
+      "id": 5,
+      "name": "Grande"
+    }
   ]
 }
