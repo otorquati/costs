@@ -1,5 +1,5 @@
 /* Define os estilos dos cartões */
-.project_card {
+.company_card {
   padding: 1em;
   border: 1px solid #7a7a7a;
   border-radius: 5px;
@@ -7,7 +7,7 @@
   margin: 0.5%;
 }
 
-.project_card h4 {
+.company_card h4 {
   background-color: #222;
   color: #ffBB33;
   padding: .4em;
@@ -15,21 +15,21 @@
   font-size: 1.3em;
 }
 
-.project-card p {
+.company-card p {
   color: #7a7a7a;
   margin-bottom: 1em;
 }
 
-.project_card p span {
+.company_card p span {
   font-weight: bold;
 }
 
-.category_text {
+.porte_text {
   display: flex;
   align-items: center;
 }
 
-.category_text span {
+.porte_text span {
   display: block;
   width: 12px;
   height: 12px;
@@ -39,31 +39,35 @@
 }
 
 /* Define a cor de identificação das categortias */
-.category_text .infra {
-  background-color: #ffaebc;
+.porte_text .mei {
+  background-color: #f607e6;
   
 }
-.category_text .desenvolvimento {
-  background-color: #a0e7e5;
+.porte_text .micro {
+  background-color: #04f7ef;
   
 }
-.category_text .design {
-  background-color: #b4f8c8;
+.porte_text .pequeno {
+  background-color: #06f94f;
   
 }
-.category_text .planejamento {
-  background-color: #fbe7c6;
+.porte_text .medio {
+  background-color: #f6f606;
+
+}
+.porte_text .grande {
+  background-color: #f50606;
 
 }
 /* Define o estilo dos botões de ação */
-.project_card_actions {
+.company_card_actions {
   margin-top: 1.2em;
   display: flex;
   align-items: center;
 }
 
-.project_card_actions a,
-.project_card_actions button {
+.company_card_actions a,
+.company_card_actions button {
   text-decoration: none;
   border: none;
   background-color: #FFF;
@@ -80,12 +84,12 @@
   transition: 0.5s;
 }
 
-.project_card_actions svg {
+.company_card_actions svg {
   margin-right: 0.5em;
 }
 
-.project_card_actions a:hover,
-.project_card_actions button:hover {
+.company_card_actions a:hover,
+.company_card_actions button:hover {
   background-color: #222;
   color: #FFBB33;
   

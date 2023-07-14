@@ -95,43 +95,23 @@
   ],
   "companies": [
     {
-      "0": {
-        "id": 1,
-        "name": "Micro Empreendedor"
-      },
-      "1": {
-        "id": 2,
-        "name": "Micro Empresa"
-      },
-      "2": {
-        "id": 3,
-        "name": "Pequeno"
-      },
-      "3": {
-        "id": 4,
-        "name": "Médio"
-      },
-      "4": {
-        "id": 5,
-        "name": "Grande"
-      },
-      "name": "torquality",
-      "telefone": "12988395065",
+      "name": "Osvaldo",
+      "telefone": "123456",
       "porte": {
-        "id": "1",
-        "name": "Micro Empreendedor"
+        "id": "3",
+        "name": "Pequeno"
       },
       "id": 1
     }
   ],
-  "porte": [
+  "portes": [
     {
       "id": 1,
-      "name": "Micro Empreendedor"
+      "name": "Mei"
     },
     {
       "id": 2,
-      "name": "Micro Empresa"
+      "name": "Micro"
     },
     {
       "id": 3,
@@ -139,7 +119,7 @@
     },
     {
       "id": 4,
-      "name": "Médio"
+      "name": "Medio"
     },
     {
       "id": 5,

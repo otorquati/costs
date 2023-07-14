@@ -37,6 +37,7 @@ function Project() {
     // Transforma os dados em json
     .then((resp) => resp.json())
     .then((data) => {
+        console.log(data)
         setProject(data)
         setServices(data.services)
       })

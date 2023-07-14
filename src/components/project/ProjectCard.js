@@ -1,5 +1,5 @@
 import React from 'react'
-// Importa os ícones da çib de ícones
+// Importa os ícones da lib de ícones
 import {BsPencil, BsFillTrashFill} from 'react-icons/bs'
 import {Link} from 'react-router-dom'
 

@@ -9,10 +9,10 @@ import SubmitButton from '../form/SubmitButton'
 import styles from './CompanyForm.module.css'
 
 function CompanyForm({ handleSubmit, btnText, companyData }){
-  const [portes, setPorte] = useState([])
+  const [portes, setPortes] = useState([])
   const [company, setCompany] = useState(companyData || {})
   useEffect(() => {
-    fetch('http://localhost:5000/porte', {
+    fetch('http://localhost:5000/portes', {
     method: 'GET',
     headers: {
     'Content-Type': 'application/json'
@@ -20,14 +20,14 @@ function CompanyForm({ handleSubmit, btnText, companyData }){
 })
   .then((resp) => resp.json())
   .then((data) => {
-    setPorte(data)
+    setPortes(data)
   })
   .catch((err) => console.log(err))
   }, [])
 
   const submit = (e) => {
     e.preventDefault()
-    console.log(company)
+    //console.log(company)
     handleSubmit(company)
   }
 
