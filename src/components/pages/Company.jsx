@@ -8,7 +8,7 @@ import {useState, useEffect} from 'react'
 import Loading from '../layout/Loading'
 import Container from '../layout/Container'
 import Message from '../layout/Message'
-import CompanyForm from '../project/ProjectForm'
+import CompanyForm from '../company/CompanyForm'
 
 // Importa o módulo de estilos
 import styles from './Company.module.css'
@@ -18,7 +18,7 @@ function Company() {
   const {id} = useParams()
   // Cria as constantes e seta seu estado 
   const [company, setCompany]=useState([])
-  const [showcompanyForm, setShowCompanyForm] = useState(false)
+  const [showCompanyForm, setShowCompanyForm] = useState(false)
   const [message, setMessage] = useState()
   const [type, setType] = useState()
 
@@ -40,29 +40,22 @@ function Company() {
     }, 300)
     },[id])
 
-    function editPost(project) {
+    function editPost(company) {
       setMessage('')
-      // budget validation
-      if(project.budget < project.cost) {
-        // mensagem
-        setMessage('O orçamento não pode ser menor que o custo do projeto')
-        setType('error')
-        return(false)
-      }
       fetch(`http://localhost:5000/companies/${company.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(project),
+        body: JSON.stringify(company),
       })
       // Transforma os dados em json
       .then((resp) => resp.json())
       .then((data) => {
           setCompany(data)
-          setShowProjectForm(false)
+          setShowCompanyForm(false)
           // Mensagem
-          setMessage('Projeto atualizado')
+          setMessage('Empresa Atualizada')
           setType('success')          
         })
         .catch((err)=> console.log(err))
@@ -70,7 +63,7 @@ function Company() {
 
 
     function toggleCompanyForm() {
-      setShowCompanyForm(!showProjectForm)
+      setShowCompanyForm(!showCompanyForm)
     }
     
   return (
@@ -80,7 +73,7 @@ function Company() {
       <Container customClass="column">
         {message && <Message type={type} msg={message} />}
         <div className={styles.details_container}>
-          <h1>Empres : {company.name}</h1>
+          <h1>Empresa : {company.name}</h1>
           <button className={styles.btn} onClick={toggleCompanyForm}>
             {!showCompanyForm ? 'Editar Empresa' : 'Fechar'}
           </button>
@@ -94,7 +87,7 @@ function Company() {
               </p>
             </div>
           ) : (
-            <div className={styles.project_info}>
+            <div className={styles.company_info}>
               <CompanyForm 
                 handleSubmit={editPost} 
                 btnText="Concluir edição"

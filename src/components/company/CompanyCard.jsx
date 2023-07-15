@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 // Importa o módulo de estilos do componente
 import styles from './CompanyCards.module.css'
 
-function CompanyCard(id, name, telefone, porte, handleRemove) {
+function CompanyCard({id, name, telefone, porte, handleRemove}) {
 
   console.log(porte)
   const remove =(e) =>{
