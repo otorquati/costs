@@ -12,6 +12,7 @@ import CompanyForm from '../company/CompanyForm'
 
 // Importa o módulo de estilos
 import styles from './Company.module.css'
+import ContactCard from '../contact/ContactCard';
 
 
 function Company() {
@@ -19,6 +20,7 @@ function Company() {
   // Cria as constantes e seta seu estado 
   const [company, setCompany]=useState([])
   const [showCompanyForm, setShowCompanyForm] = useState(false)
+  const [showContactForm, setShowContactForm] = useState(false)
   const [message, setMessage] = useState()
   const [type, setType] = useState()
 
@@ -61,10 +63,42 @@ function Company() {
         .catch((err)=> console.log(err))
       }
 
-
+      function createContact() {
+        setMessage('')
+        // Validacão de contato
+        const lastService = company.contact[company.contact.length -1]
+        // Cria o id do contato com a biblioteca uuidv4 
+        lastContact.id=uuidv4()
+  
+        fetch(`http://localhost:5000/companies/${company.id}`, {
+          method: 'PATCH',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(project),
+        })
+        // Transforma os dados em json
+        .then((resp) => resp.json())
+        .then((data) => {
+            // Exibir os serviços
+            setShowContactForm(false)
+            setMessage('Contato atualizado')
+            setType('success')          
+          })
+          .catch((err)=> console.log(err))
+        }
+  
+      function removeContact(id) {
+        setMessage('')
+        const contactUpdated = company.contact.filter(
+          (contact) => contact.id !== id
+        )
+      function toggleContactForm() {
+        setShowContactForm(!showContactForm)
+      }
     function toggleCompanyForm() {
       setShowCompanyForm(!showCompanyForm)
-    }
+    }}
     
   return (
     <>
@@ -96,6 +130,23 @@ function Company() {
             </div>
           )}
         </div>
+        {/* Adição de contatos */}
+          <h2>Contatos</h2>
+        <Container customClass="start">
+          {contact.length > 0 && 
+            contact.map((contact) => (
+              <ContactCard
+                id={contact.id}
+                name={contact.name}
+                position={contact.position}
+                key={contact.id}
+                handleRemove={removeContact}
+                />
+            ))
+          }
+          {/* Exibe alerta de que não há serviço cadastrado*/}
+          {contact.length === 0 && <p>Não há contatos cadastrados.</p>}
+        </Container>
       </Container>
     </div> ):(
       <Loading />

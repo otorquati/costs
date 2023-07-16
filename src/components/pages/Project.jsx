@@ -180,7 +180,8 @@ function Project() {
               />
             </div>
           )}
-        </div>{/* Adição de Serviços ao projeto */}
+        </div>
+        {/* Adição de Serviços ao projeto */}
         <div className={styles.service_form_container}>
           <h2>Adicione um serviço</h2>
           <button className={styles.btn} onClick={toggleServiceForm}>
