@@ -19,6 +19,7 @@ function Company() {
   const {id} = useParams()
   // Cria as constantes e seta seu estado 
   const [company, setCompany]=useState([])
+  const [contact, setContact]=useState([])
   const [showCompanyForm, setShowCompanyForm] = useState(false)
   const [showContactForm, setShowContactForm] = useState(false)
   const [message, setMessage] = useState()
@@ -92,14 +93,16 @@ function Company() {
         setMessage('')
         const contactUpdated = company.contact.filter(
           (contact) => contact.id !== id
-        )
+        )}
+
       function toggleContactForm() {
         setShowContactForm(!showContactForm)
       }
-    function toggleCompanyForm() {
-      setShowCompanyForm(!showCompanyForm)
-    }}
-    
+
+      function toggleCompanyForm() {
+        setShowCompanyForm(!showCompanyForm)
+      }
+
   return (
     <>
     {company.name ? (
